@@ -36,11 +36,6 @@
                  compatible = "zmk,keymap";
  
                  default_layer {
- // -----------------------------------------------------------------------------------------
- // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
- // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
- // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
- //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                          bindings = <
  &trans   &kp Q               &kp W       &kp F       &kp P         &kp B           &kp J     &kp L        &kp U        &kp Y       &kp SQT             &trans
  &trans   &ht LSHFT A         &kp R       &ht LALT S  &ht LGUI T    &kp G           &kp K     &ht RGUI N   &ht RALT E   &kp I       &ht RSHFT O         &trans
