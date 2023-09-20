@@ -55,7 +55,7 @@ media_layer {
 navigation_layer {
  
                          bindings = <
- &trans   &trans              &trans      &trans      &trans       &trans           &kp LC(Z)      &kp LC(v)        &kp LC(C)    &kp LC(X)    &kp LC(Y)        &trans
+ &trans   &trans              &trans      &trans      &trans       &trans           &kp LC(Z)      &kp LC(V)        &kp LC(C)    &kp LC(X)    &kp LC(Y)        &trans
  &trans   &kp LSHFT           &trans      &bt LALT    &bt LGUI     &trans           &CAPS_WORD  &kp LEFT         &kp DOWN     &kp UP       &kp RIGHT        &trans
  &trans   &kp LCTRL           &trans      &trans      &trans       &trans           &kp C_AC_INS   &kp HOME         &kp PG_DN    &kp PG_UP    &kp END          &trans
                               &trans      &trans      &trans                        &kp RET        &kp BSPC         &kp DEL
