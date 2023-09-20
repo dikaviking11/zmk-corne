@@ -7,6 +7,8 @@
  #include <behaviors.dtsi>
  #include <dt-bindings/zmk/keys.h>
  #include <dt-bindings/zmk/bt.h>
+ #include <dt-bindings/zmk/outputs.h>
+
  #define DEFAULT 0
  #define MED     1
  #define NAV     2
@@ -14,11 +16,12 @@
  #define SYM     4
  #define NUM     5
  #define FUN     6
+
  / {
         behaviors {
-        ht: hold_tap {
-                compatible = "zmk,behavior-hold-tap";
+            ht: hold_tap {
                 label = "hold_tap";
+                compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <220>;
@@ -28,32 +31,28 @@
             };
         };
 
-        &key_repeat {
-                usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
-            };
-
          keymap {
                  compatible = "zmk,keymap";
  
-                 default_layer {
+ default_layer {
                          bindings = <
  &trans   &kp Q               &kp W       &kp F       &kp P         &kp B           &kp J     &kp L        &kp U        &kp Y       &kp SQT             &trans
  &trans   &ht LSHFT A         &kp R       &ht LALT S  &ht LGUI T    &kp G           &kp K     &ht RGUI N   &ht RALT E   &kp I       &ht RSHFT O         &trans
  &trans   &ht LCTRL Z         &kp X       &kp C       &kp D         &kp V           &kp M     &kp H        &kp COMMA    &kp DOT     &ht RCTRL FSLH      &trans
                           &lt MED ESC &lt NAV SPACE &lt MOU TAB                           &lt SYM RET &lt NUM BSPC  &lt FUN DEL
                          >;
-                 };
-                 media_layer {
- 
-                         bindings = <
+               };
+                
+media_layer {
+                          bindings = <
  &trans   &trans              &trans      &trans      &trans       &trans           &trans     &trans       &trans       &trans       &trans              &trans
  &trans   &kp LSHFT           &trans      &bt LALT    &bt LGUI     &trans           &trans     &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT          &trans
  &trans   &kp LCTRL           &trans      &trans      &trans       &trans           &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &trans       &ext_power EP_TOG   &trans
                           &trans &trans &trans                           &kp C_STOP  &kp C_PP   &kp C_MUTE
                          >;
-                 };
+            };
  
-                 navigation_layer {
+navigation_layer {
  
                          bindings = <
  &trans   &trans              &trans      &trans      &trans       &trans           &kp LC(Z)     &kp LC(v)  &kp LC(C)    &kp LC(X)    &kp LC(Y)        &trans
@@ -62,7 +61,8 @@
                               &trans  &trans   &trans                                &kp RET &kp BSPC  &kp DEL
                          >;
                  };
-                 mouse_layer {
+
+mouse_layer {
  
                          bindings = <
  &trans &kp ESC   &kp LG(TAB)      &trans             &trans       &kp BKSP         &trans   &trans   &trans &trans    &trans  &trans
@@ -71,8 +71,8 @@
                                      &trans     &trans       &trans                 &kp RET  &trans   &kp RALT
                          >;
                  };
-                 symbol_layer {
- 
+                
+symbol_layer {
                          bindings = <
  &trans &kp LBRC     &kp AMPS     &kp STAR     &kp LPAR     &kp RBRC                &trans   &trans   &trans &trans    &trans            &trans
  &trans &kp COLON    &kp DLLR     &kp PRCNT    &kp CARET    &kp PLUS                &trans   &kp RGUI &kp RALT &trans  &kp RSHIFT        &trans
@@ -80,8 +80,8 @@
                                      &kp LPAR     &kp RPAR       &kp UNDER                  &trans  &trans   &trans
                          >;
                  };
-                 number_layer {
- 
+                 
+number_layer {
                          bindings = <
  &trans &kp LBKT  &kp N7      %kp N8       &kp N9      &kp RBKT                     &trans   &trans   &trans    &trans    &trans        &trans
  &trans &kp SEMI  &kp N4      &kp N5       &kp N6      &kp EQUAL                    &trans   &kp RGUI &kp RALT  &trans    &kp RSHIFT    &trans
@@ -89,14 +89,15 @@
                                      &kp DOT     &kp N0       &kp MINUS                   &trans  &trans   &trans
                          >;
                  };
-                 function_layer {
- 
+                 
+function_layer {
                          bindings = <
  &trans &kp F12   &kp F7      %kp F8       &kp F9      &kp PSCRN                    &kp C_BRI_DN   &kp C_BRI_UP     &trans    &trans    &trans        &trans
  &trans &kp F11   &kp F4      &kp F5       &kp F6      &kp SLCK                     &trans         &kp RGUI         &kp RALT  &trans    &kp RSHIFT    &trans
  &trans &kp F10   &kp F1      &kp F2       &kp F3      &kp PAUSE_BREAK              &kp C_AC_BACK  &kp C_AC_FORWARD &trans    &trans    &kp RCTRL     &trans
                                      &kp C_MENU  &kp SPACE    &kp TAB                   &trans  &trans   &trans
                          >;
-                 };
+               };
+
          };
  };
