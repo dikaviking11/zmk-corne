@@ -67,7 +67,7 @@ mouse_layer {
                          bindings = <
  &trans &kp ESC   &kp LG(TAB)      &trans             &trans       &kp BSPC         &trans         &trans           &trans &trans    &trans  &trans
  &trans &kp TAB   &kp LC(LS(LEFT)) &kp LC(LS(RIGHT))  &trans       &kp DEL          &kp LEFT       &kp DOWN         &kp UP &kp RIGHT &trans  &trans
- &trans &kp CAPS  &key_repeat      &trans             &trans       &kp LALT         &trans         &trans           &trans &trans    &trans  &trans
+ &trans &kp CAPS  &trans           &trans             &trans       &kp LALT         &trans         &trans           &trans &trans    &trans  &trans
                                    &trans             &trans       &trans           &kp RET        &trans           &kp RALT
                          >;
                  };
