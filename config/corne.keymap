@@ -15,6 +15,7 @@
  #define NUM     3
  #define NAV     4
  #define MED     5
+ #define MIR     6
 
  / {
         behaviors {
@@ -35,7 +36,7 @@
                 mods = <(MOD_LSFT|MOD_RSFT)>;
                 keep-mods = <(MOD_RSFT)>;
             };
-            
+        
         };
 
         
@@ -45,7 +46,7 @@
  
  default_layer {
                          bindings = <
- &trans   &kp Q               &kp W       &kp F       &kp P         &kp B           &kp J     &kp L        &kp U        &kp Y       &kp SQT             &trans
+ &trans   &kp Q               &kp W       &kp F       &kp P         &kp b           &kp J     &kp L        &kp U        &kp Y       &kp SQT             &trans
  &trans   &ht LSHFT A         &kp R       &ht LALT S  &ht LGUI T    &kp G           &kp K     &ht RGUI N   &ht RALT E   &kp I       &ht RSHFT O         &trans
  &trans   &ht LCTRL Z         &kp X       &kp C       &kp D         &kp V           &kp M     &kp H        &kp COMMA    &kp DOT     &ht RCTRL FSLH      &trans
                               &lt SYM ESC &lt FUN SPACE &lt NUM TAB                           &lt NAV RET &lt MED SPACE &bspc_del
@@ -67,17 +68,17 @@ function_layer {
                          bindings = <
  &trans &kp F12   &kp F7      &kp F8       &kp F9      &kp PSCRN                    &kp C_BRI_DN   &kp C_BRI_UP     &trans    &trans    &trans        &trans
  &trans &kp F11   &kp F4      &kp F5       &kp F6      &kp SLCK                     &trans         &kp RGUI         &kp RALT  &trans    &kp RSHFT    &trans
- &trans &kp F10   &kp F1      &kp F2       &kp F3      &kp PAUSE_BREAK              &kp C_AC_BACK  &kp C_AC_FORWARD &trans    &trans    &kp RCTRL     &trans
+ &trans &kp F10   &kp F1      &kp F2       &kp F3      &tog MIR              &kp C_AC_BACK  &kp C_AC_FORWARD &trans    &trans    &kp RCTRL     &trans
                               &kp C_MENU   &trans   &kp TAB                      &trans         &trans           &trans
                          >;  
                };
 
 number_layer {
                          bindings = <
- &trans &kp LBKT  &kp N7      &kp N8       &kp N9      &kp RBKT                     &trans         &trans           &trans    &trans    &trans        &trans
- &trans &kp SEMI  &kp N4      &kp N5       &kp N6      &kp EQUAL                    &trans         &kp RGUI         &kp RALT  &trans    &kp RSHFT    &trans
- &trans &kp GRAVE &kp N1      &kp N2       &kp N3      &kp BSLH                     &trans         &trans           &trans    &trans    &kp RCTRL     &trans
-                              &kp DOT      &kp N0      &trans                    &trans         &trans           &trans
+ &trans &kp LBKT         &kp N7      &kp N8       &kp N9      &kp RBKT                     &trans         &trans           &trans    &trans    &trans        &trans
+ &trans &ht LSHIFT SEMI  &kp N4      &kp N5       &kp N6      &kp EQUAL                    &trans         &kp RGUI         &kp RALT  &trans    &kp RSHFT    &trans
+ &trans &ht LCTRL GRAVE  &kp N1      &kp N2       &kp N3      &kp BSLH                     &trans         &trans           &trans    &trans    &kp RCTRL     &trans
+                              &kp N0      &kp MINUS      &trans                    &trans         &trans           &trans
                          >;
                  };
 
@@ -100,7 +101,14 @@ media_layer {
                          >;
             };
  
-
+mirror_layer {
+                         bindings = <
+&trans &kp J     &kp L        &kp U        &kp Y       &tog MIR                      &trans   &trans       &trans       &trans       &trans      &trans  
+&trans &kp K     &ht RGUI N   &ht RALT E   &kp I       &ht RSHFT O                  &trans   &trans       &trans       &trans       &trans      &trans
+&trans &kp M     &kp H        &kp COMMA    &kp DOT     &ht RCTRL FSLH               &trans   &trans       &trans       &trans       &trans      &trans
+                           &lt NAV RET &lt MED SPACE &bspc_del                             &lt SYM ESC &lt FUN SPACE &lt NUM TAB                           
+                         >;
+               };
 
          };
  };
