@@ -46,7 +46,7 @@
  
  default_layer {
                          bindings = <
- &trans   &kp Q               &kp W       &kp F       &kp P         &kp b           &kp J     &kp L        &kp U        &kp Y       &kp SQT             &trans
+ &trans   &kp Q               &kp W       &kp F       &kp P         &kp B           &kp J     &kp L        &kp U        &kp Y       &kp SQT             &trans
  &trans   &ht LSHFT A         &kp R       &ht LALT S  &ht LGUI T    &kp G           &kp K     &ht RGUI N   &ht RALT E   &kp I       &ht RSHFT O         &trans
  &trans   &ht LCTRL Z         &kp X       &kp C       &kp D         &kp V           &kp M     &kp H        &kp COMMA    &kp DOT     &ht RCTRL FSLH      &trans
                               &lt SYM ESC &lt FUN SPACE &lt NUM TAB                           &lt NAV RET &lt MED SPACE &bspc_del
@@ -68,7 +68,7 @@ function_layer {
                          bindings = <
  &trans &kp F12   &kp F7      &kp F8       &kp F9      &kp PSCRN                    &kp C_BRI_DN   &kp C_BRI_UP     &trans    &trans    &trans        &trans
  &trans &kp F11   &kp F4      &kp F5       &kp F6      &kp SLCK                     &trans         &kp RGUI         &kp RALT  &trans    &kp RSHFT    &trans
- &trans &kp F10   &kp F1      &kp F2       &kp F3      &tog MIR              &kp C_AC_BACK  &kp C_AC_FORWARD &trans    &trans    &kp RCTRL     &trans
+ &trans &kp F10   &kp F1      &kp F2       &kp F3      &tog MIR                     &kp C_AC_BACK  &kp C_AC_FORWARD &trans    &trans    &kp RCTRL     &trans
                               &kp C_MENU   &trans   &kp TAB                      &trans         &trans           &trans
                          >;  
                };
